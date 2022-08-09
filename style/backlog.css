@@ -1,0 +1,50 @@
+.backlog {
+  border: 1px solid black;
+  display: grid;
+  grid-template-rows: 50px 30px 1fr;
+  background-color: rgb(211, 208, 208);
+  grid-template-areas:
+    "backlog_name"
+    "backlog_search"
+    "backlog_tasks";
+}
+
+.backlog_name {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 24px;
+}
+
+.backlog_search {
+  text-align: center;
+  width: 100%;
+}
+
+.backlog_hide {
+  display: none;
+}
+
+.backlog_tasks-item {
+  border: 1px solid black;
+  margin: 10px 5px;
+  padding: 0 5px;
+  background-color: rgb(240, 238, 238);
+}
+
+.backlog-input {
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .backlog {
+    visibility: hidden;
+    display: none;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "planner";
+  }
+}

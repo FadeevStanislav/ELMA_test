@@ -1,0 +1,103 @@
+.planner {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  color: white;
+  grid-template-areas:
+    "planner_button-panel"
+    "planner_tabel-panel";
+}
+
+.planner_lines-panel {
+  border: 1px solid black;
+  border-right: none;
+  background-color: white;
+}
+
+.planner_lines-dates {
+  border-bottom: 1px solid black;
+}
+
+.planner div {
+  text-align: center;
+}
+
+.planner_button-panel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.planner_button-panel button {
+  background-color: rgb(92, 184, 92);
+}
+
+.planner_zone-user {
+  background-color: rgb(92, 184, 92);
+}
+
+.user-task-for-day {
+  width: 94%;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 1px;
+  display: inline-block;
+  position: relative;
+}
+
+.user-task-for-day:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  left: 15%;
+  top: 30%;
+  z-index: 1;
+  font-size: 11px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+}
+
+.planner_zone-day {
+  min-height: 25vh;
+  border-right: 1px solid grey;
+}
+
+.overload-day {
+  background-color: rgb(207, 110, 110);
+}
+
+.not-overload-day {
+  background-color: rgb(92, 184, 92);
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 13px;
+  }
+
+  button {
+    font-size: 24px;
+  }
+
+  .planner {
+    grid-template-rows: 100px 1fr;
+  }
+
+  .planner_lines-dates {
+    font-size: 13px;
+  }
+
+  .planner_zone-day {
+    min-height: 10vh;
+    max-width: 12.5vw;
+    word-wrap: break-word;
+  }
+
+  .user-task-for-day {
+    font-size: 18px;
+  }
+
+  .planner button {
+    width: 100%;
+  }
+}

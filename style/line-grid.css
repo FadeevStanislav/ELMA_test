@@ -1,0 +1,33 @@
+.line-grid {
+  border-bottom: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas:
+    "line-grid_user"
+    "line-grid_day1"
+    "line-grid_day2"
+    "line-grid_day3"
+    "line-grid_day4"
+    "line-grid_day5"
+    "line-grid_day6"
+    "line-grid_day7";
+}
+
+.line-grid_users {
+  min-height: 25vh;
+}
+
+.line-grid-date {
+  color: black;
+  text-align: center;
+}
+
+.line-grid_user {
+  border-right: 1px solid black;
+}
+
+@media (max-width: 1024px) {
+  .line-grid_users {
+    min-height: 10vh;
+  }
+}

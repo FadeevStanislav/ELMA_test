@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Планировщик задач</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <link rel="stylesheet" type="text/css" href="style/planner.css">
+  <link rel="stylesheet" type="text/css" href="style/backlog.css">
+  <link rel="stylesheet" type="text/css" href="style/line-grid.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="planner">
+      <div class="planner_button-panel">
+        <button class="planner_button_left">Раньше</button>
+        <button class="planner_button_right">Позже</button>
+      </div>
+      <div class="planner_lines-panel">
+        <div class="planner_lines-dates line-grid">
+        </div>
+        <div class="planner_lines-user">
+        </div>
+      </div>
+    </div>
+    <div class="backlog">
+      <div class="backlog_name">
+        Backlog
+      </div>
+      <div class="backlog_search">
+        <input type="text" id="backlog-input" placeholder="Найти">
+      </div>
+      <div class="backlog_tasks">
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/services/api.js"></script>
+  <script src="./scripts/modules/date.js"></script>
+  <script src="./scripts/modules/backlog.js"></script>
+  <script src="./scripts/modules/planner.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
